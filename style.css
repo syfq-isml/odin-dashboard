@@ -18,7 +18,7 @@ body {
 
 #wrapper-all {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(250px, 300px) 3fr;
     grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -28,6 +28,37 @@ header {
     background-color: rgb(238, 146, 146);
 
     grid-area: header;
+
+    grid-row: auto auto;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.search-bar-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    flex:1;
+
+    height: 1.7rem;
+    border-radius: 20px;
+    background-color: rgb(214, 225, 233);
+    border-width: 0;
+    padding: 0 50px;
+    margin: 0 50px 0 150px;
+}
+
+.profile-nav ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar {
