@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+* {
+    list-style-type: none;
+}
+
 body {
-    background-color: aqua;
+    background-color: white;
+}
+
+
+
+#wrapper-all {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+header {
+    background-color: rgb(238, 146, 146);
+
+    grid-area: header;
+}
+
+.sidebar {
+    background-color: rgb(122, 122, 240);
+    grid-area: sidebar;
+
+    font-size: 1.6rem;
+
+    /* display: grid;
+    grid-template-rows: 200px 1fr 1fr; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 50px;
+    padding-left: 30px;
+    
+}
+
+main {
+    background-color: rgb(112, 189, 112);
+    grid-area: main;
 }
