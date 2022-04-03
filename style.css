@@ -46,11 +46,16 @@ header {
 input {
     flex:1;
 
+    background-image: url(./assets/svg/search_black_24dp.svg);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 10px 50% ;
+
     height: 1.7rem;
     border-radius: 20px;
     background-color: rgb(214, 225, 233);
     border-width: 0;
-    padding: 0 50px;
+    padding: 0 35px;
     margin: 0 50px 0 150px;
 }
 
