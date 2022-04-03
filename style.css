@@ -8,6 +8,8 @@ html {
 
 * {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -61,10 +63,86 @@ input {
 
 .profile-nav ul {
     display: flex;
-    gap: 20px;
+    gap: 35px;
     align-items: center;
     justify-content: center;
+
+    padding: 0;
+    margin: 20px 0;
 }
+
+.profile-nav ul li {
+    position: relative;
+}
+
+.profile-nav ul :last-child{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.bell-button {
+    position: relative;
+    top:4px;
+}
+
+.small-pfp {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.big-pfp {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    margin: 0 0 20px 40px;
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.greeting-section {
+    display: flex;
+}
+
+.greeting-name :first-child {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin:20px 20px 0 20px;
+}
+
+.greeting-name :last-child {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 5px 20px;
+}
+
+.quick-buttons-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:20px;
+}
+
+.quick-buttons-section button {
+    border-radius: 20px;
+    border-width: 0;
+    background-color: green;
+    height: 2.5rem;
+    width: 5rem;
+}
+
+.quick-buttons-section button:last-child {
+    margin-right: 100px;
+}
+
+
+
 
 .sidebar {
     background-color: rgb(122, 122, 240);
