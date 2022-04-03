@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap');
 
 html {
     font-size: 1rem;
@@ -16,15 +16,22 @@ body {
     background-color: white;
 }
 
-
-
 #wrapper-all {
     display: grid;
-    grid-template-columns: minmax(250px, 300px) 3fr;
+    grid-template-columns: minmax(340px, 400px) 3fr;
+    grid-template-rows: 1fr 4fr;
     grid-template-areas:
     "sidebar header"
     "sidebar main";
+    height: 100vh;
 }
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- HEADER SECTION --- */
 
 header {
     background-color: rgb(238, 146, 146);
@@ -142,26 +149,114 @@ input {
 }
 
 
-
+/* --- SIDEBAR SECTION --- */
 
 .sidebar {
     background-color: rgb(122, 122, 240);
     grid-area: sidebar;
 
-    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
 
     /* display: grid;
     grid-template-rows: 200px 1fr 1fr; */
 
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    padding-top: 50px;
-    padding-left: 30px;
+    gap: 50px;
+    padding: 0 30px;
+    
+    position: relative;
+}
+
+.sidebar div:not(.side-logo) {
+    margin-left: 20px;
+}
+
+.side-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    right: 10px;
+
+    margin-top: 50px;
+}
+
+.side-logo img {
+    width: 65px;
+    height: auto;
+}
+
+.side-logo h1 {
+    margin: 0;
+
+    display: inline-block;
+    font-size: 3.5rem;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: normal;
+    text-transform: none;
+
+    position: relative;
+    left: 3px;
     
 }
+
+.side-nav div:not(:first-child),
+.settings div:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* --- MAIN SECTION --- */
 
 main {
     background-color: rgb(112, 189, 112);
     grid-area: main;
+
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 30px;
+    gap: 30px;
+}
+
+.projects-section {
+    grid-row: span 2;
+}
+
+main div h1 {
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+    
+    font-weight: 700;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 15px;
+}
+
+.card {
+    min-height: 450px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.announcements-section {
+
+}
+
+.announcements-box,
+.trending-box {
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.trending-section {
+    grid-column: 2;
 }
