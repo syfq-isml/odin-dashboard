@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&display=swap');
 
+:root {
+    --clr-green: #005b49;
+}
+
 html {
     font-size: 1rem;
     font-family: 'Noto Sans', sans-serif;
@@ -14,6 +18,7 @@ html {
 
 body {
     background-color: white;
+    color: #383835;
 }
 
 #wrapper-all {
@@ -29,12 +34,17 @@ body {
 h1 {
     margin: 0;
     padding: 0;
+    
+}
+
+img {
+    cursor: pointer;
 }
 
 /* --- HEADER SECTION --- */
 
 header {
-    background-color: rgb(238, 146, 146);
+    background-color: aliceblue;
 
     grid-area: header;
 
@@ -119,15 +129,22 @@ input {
 
 .greeting-name {
     flex-shrink: 0;
+    position: relative;
 }
 
-.greeting-name :first-child {
+.git-logo {
+    position: relative;
+    top: 5px;
+    margin-right: 3px;
+}
+
+.greeting-name h2:first-child {
     font-size: 1.1rem;
     font-weight: 300;
     margin:20px 20px 0 20px;
 }
 
-.greeting-name :last-child {
+.greeting-name h2:last-child {
     font-size: 1.7rem;
     font-weight: 600;
     margin: 5px 20px;
@@ -144,7 +161,7 @@ input {
 .quick-buttons-section button {
     border-radius: 20px;
     border-width: 0;
-    background-color: green;
+    background-color: #0c8a71;
     height: 2.5rem;
     width: 5rem;
 }
@@ -157,7 +174,7 @@ input {
 /* --- SIDEBAR SECTION --- */
 
 .sidebar {
-    background-color: rgb(122, 122, 240);
+    background-image: linear-gradient(0deg, var(--clr-green), #0e8870);
     grid-area: sidebar;
 
     text-transform: uppercase;
@@ -177,14 +194,14 @@ input {
 
 .sidebar div:not(.side-logo) {
     margin-left: 20px;
+    color: #d6d4ca;
 }
 
 .sidebar div:not(.side-logo) div:hover {
     cursor: pointer;
     font-weight: 700;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.452), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to right, #d6d4ca34, rgba(255, 255, 255, 0));
 }
-
 
 .side-logo {
     position: relative;
@@ -195,6 +212,7 @@ input {
     right: 10px;
 
     margin-top: 50px;
+
 }
 
 .side-logo img {
@@ -204,27 +222,32 @@ input {
 
 .side-logo h1 {
     margin: 0;
-
+    
     display: inline-block;
     font-size: 3.5rem;
     font-family: 'Pacifico', cursive;
     letter-spacing: normal;
     text-transform: none;
-
+    
     position: relative;
     left: 3px;
     
+    color: aliceblue;
+    text-shadow: 0px 0px 5px #d6d4ca;
+    
 }
 
-.side-nav div:not(:first-child),
-.settings div:not(:first-child) {
-    margin-top: 20px;
+.side-nav div,
+.settings div {
+    padding: 10px 0;
+    position: relative;
+    left: 10px;
 }
 
 /* --- MAIN SECTION --- */
 
 main {
-    background-color: rgb(112, 189, 112);
+    background-color: #d6d4ca;
     grid-area: main;
 
     display: grid;
@@ -252,7 +275,7 @@ main div h1 {
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,0.75fr));
-    gap: 15px;
+    gap: 23px;
 }
 
 .card {
@@ -288,12 +311,6 @@ main div h1 {
 
     border-radius: inherit;
 }
-
-.announcements-section {
-
-}
-
-
 
 .announcements-box div {
     padding: 20px 0;
@@ -355,8 +372,44 @@ p {
 }
 
 
+/* --- COLLECTIVE STYLING -- */
+
+.card,
+.announcements-box,
+.trending-box,
+header {
+    box-shadow: 3px 3px 5px #9F9D94;
+}
 
 
+a {
+    text-decoration: underline;
+    color: #383835;
+}
 
+a:visited {
+    color: #383835;
+}
+
+.sidebar div a {
+    text-decoration: none;
+    color: #d6d4ca;
+}
+
+.credits {
+    font-size: 0.7rem;
+    font-weight:200;
+
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+
+/* --- ANIMATIONS -- */
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform ease 250ms;
+}
 
 
