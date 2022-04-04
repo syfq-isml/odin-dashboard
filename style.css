@@ -314,6 +314,7 @@ main div h1 {
     font-weight: 500;
     text-decoration: underline;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 p {
@@ -338,6 +339,23 @@ p {
 .trending-section {
     margin-top: 40px;
 }
+
+.trending-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 20px 0;
+}
+
+.trending-box .small-pfp {
+    grid-row: span 2;
+}
+
+.trending-box h2 {
+    font-size: 1.2rem;
+}
+
+
+
 
 
 
