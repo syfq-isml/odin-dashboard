@@ -120,7 +120,7 @@ input {
 
 .header-bottom {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(600px,1fr) 1fr;
 }
 
 .greeting-section {
